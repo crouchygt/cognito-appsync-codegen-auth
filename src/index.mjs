@@ -1,14 +1,12 @@
 import * as AmazonCognitoIdentity from "amazon-cognito-identity-js";
 
-const USER_POOL_ID = process.env.USER_POOL;
-const USER_POOL_CLIENT_ID = process.env.USER_POOL_CLIENT_ID;
-const COGNITO_USERNAME = process.env.USERNAME;
-const COGNITO_PASSWORD = process.env.PASSWORD;
+const COGNITO_USERNAME = process.env.UP_USERNAME;
+const COGNITO_PASSWORD = process.env.UP_PASSWORD;
 
-export const cognitoFetch = () => {
+export const cognitoAuthToken = (userPoolId, userPoolClientId) => {
   const userPool = new AmazonCognitoIdentity.CognitoUserPool({
-    UserPoolId: USER_POOL_ID,
-    ClientId: USER_POOL_CLIENT_ID,
+    UserPoolId: userPoolId,
+    ClientId: userPoolClientId,
   });
   const authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(
     {
