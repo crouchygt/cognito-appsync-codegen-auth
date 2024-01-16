@@ -1,0 +1,14 @@
+{
+  "name": "@crouchy/appsync-cognito-auth",
+  "version": "1.0.0",
+  "description": "A fetch client to authenticate with Cognito for introspection support for AWS AppSync",
+  "main": "src/index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "amazon-cognito-identity-js": "^6.3.7"
+  }
+}
